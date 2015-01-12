@@ -27,10 +27,10 @@ print '	User<input type="text" name="user" />'
 print '	Game<input type="text" name="game" />'
 print '	<input type="submit" value="Display Rolls" />'
 print '	</form>'
-print '</html>'
 
 
 result = $my.query("SELECT * from rolls" + clause)
 result.num_rows.times do
 	puts result.fetch_row.join("\s") + "<br />"
 end
+print '</html>'

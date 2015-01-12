@@ -1,6 +1,0 @@
-#!/usr/bin/ruby
-require "./db"
-result = $my.query("SELECT * from rolls")
-result.num_rows.times do
-	puts result.fetch_row.join("\s") + "<br />"
-end
