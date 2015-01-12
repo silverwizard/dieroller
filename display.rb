@@ -28,9 +28,9 @@ print '	Game<input type="text" name="game" />'
 print '	<input type="submit" value="Display Rolls" />'
 print '	</form>'
 
-
-result = $my.query("SELECT * from rolls" + clause)
+statement = $my.prepare("SELECT * from rolls" + clause)
+result = statement.execute
 result.num_rows.times do
-	puts result.fetch_row.join("\s") + "<br />"
+	puts result.fetch.join("\s") + "<br />"
 end
 print '</html>'
