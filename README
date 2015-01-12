@@ -1,0 +1,9 @@
+Basically, it's a slightly lower tech version of InvisibleCastle.com
+
+You use the dieroller.html to roll some dice, and then, use display.rb to view the resutls. Longterm goal is to emulate most of the functionality of Invisible castle.
+
+Currently uses the format:
+NdM for a roll of N dice with M sides.
+If you add a ! to the end of the roll line, dice will reroll if they roll the largest number
+
+If you add a > sign followed by a number, it will assume that you want to roll successes, and will only roll dice and count the number that come up higher than the number after the > sign
