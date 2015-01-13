@@ -9,4 +9,4 @@ print "password: "
 password = gets
 print "dbname: "
 dbname = gets
-config.print("my = Mysql.connect('" + hostname.strip + "', '" + username.strip + "', '" + password.strip  + "', '" + dbname.strip + "')\n")
+config.print("print 'Could not connect to DB' unless $my = Mysql.connect('" + hostname.strip + "', '" + username.strip + "', '" + password.strip  + "', '" + dbname.strip + "')\n")
