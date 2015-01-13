@@ -34,3 +34,4 @@ result.num_rows.times do
 	puts result.fetch.join("\s") + "<br />"
 end
 print '</html>'
+$my.close
