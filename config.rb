@@ -1,6 +1,6 @@
 #!/usr/local/bin/ruby
 config = File.new("db.rb", "w")
-config.print("require mysql\n")
+config.print("require 'mysql'\n")
 print "hostname: "
 hostname = gets
 print "username: "
@@ -9,4 +9,5 @@ print "password: "
 password = gets
 print "dbname: "
 dbname = gets
-config.print("print 'Could not connect to DB' unless $my = Mysql.connect('" + hostname.strip + "', '" + username.strip + "', '" + password.strip  + "', '" + dbname.strip + "')\n")
+config.print("begin\nraise 'DB Error' unless $my = Mysql.connect('" + hostname.strip + "', '" + username.strip + "', '" + password.strip  + "', '" + dbname.strip + "')\n")
+config.print("rescue\nprint 'Please double check db settings or contact the administrator'\nend")
